@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Card</title>
+    <link rel="icon" type="image/x-icon" href="JD-02-512.webp"/>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body class="bg" background="royal wp.webp">
+<div class="card-flip">
+ <div class="container"> 
+    <div class="card">
+     <div class="logos" >  `
+        <div class="chip">
+            <img src=chip.png alt="chip" width="60px" >
+        </div>
+        <div class="logo">
+            <img src="ms card.jpg" alt="www">
+        </div>
+    </div> 
+       <div class="numbers">4668 5990 3009 1896</div>
+
+    <div class="combine">
+        <div >
+            <P class="holder">Card Holder</P>
+            <h3 class="hname">YTUYTUYTUK</h3>
+        </div>
+        <div class="sbox">
+            <h3 class="fname">Expires</h3>
+            <div class="exp-date">
+            <p class="final">mm</p>
+            <p class="barcode">/</p>
+            <p class="final2">yr</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+<div class="card2">
+    <div>
+        <h3 class="top-para"> DON'T SHARE YOUR PASSWORD TO ANYONE !</p>
+    </div>
+    <div class="top-line">
+
+    </div>
+    <div >
+        <p class="name5">CVV</p>
+        </div>
+        
+        <div class="cvv" ></div>
+
+    
+</div>
+</div>  
+</div>
+
+
+<form action="">
+<div class="form">
+    <h4 class="card-num">Card number</h4>
+    <input class="input-num" maxlength="16" type="text">
+
+    <div><h4 class="card-name">Card name</h4></div>
+    <input class="input-name" maxlength="10" type="text">
+
+    <div><h4 class="card-date">Expiration Date</h4></div>
+    
+        <select name="" id="" class="input-month">
+            <option value="month"  selected disabled>month</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    
+    <select name="" id="" class="input-year" >
+        <option value="year" selected disabled>year</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        <option value="2030">2030</option>
+        <option value="2031">2031</option>
+        <option value="2032">2032</option>
+        <option value="2033">2033</option>
+    </select>
+
+    <input class="input-cvv" maxlength="4"   placeholder="CVV">
+
+    <div><h3></h3></div>
+
+    <div ><button>Submit</button></div>
+</div>
+
+
+    </div>
+
+</form>
+    <script>
+        var int1=document.querySelector('.input-num')
+        var int2=document.querySelector('.numbers')
+        int1.oninput= () =>{
+            int2.innerText=int1.value;
+        }
+
+        var name1=document.querySelector('.input-name')
+        var name2=document.querySelector('.hname')
+        name1.oninput= () =>{
+            name2.innerText=name1.value;
+        }
+
+        var month=document.querySelector('.input-month')
+        var data1=document.querySelector('.final')
+        month.oninput= () =>{
+            data1.innerText=month.value;
+        }
+
+        var year=document.querySelector('.input-year')
+        var data2=document.querySelector('.final2')
+        year.oninput= () =>{
+            data2.innerText=year.value;
+        }
+
+        var cvv2=document.querySelector('.input-cvv')
+        var maincvv=document.querySelector('.cvv')
+        var front=document.querySelector('.card')
+        var back=document.querySelector('.card2')
+
+    
+        cvv2.onmouseenter= () =>{
+            front.style.transform='perspective(1000px) rotateY(-180deg)';
+            back.style.transform='perspective(1000px) rotateY(0deg)';
+        }
+
+        cvv2.onmouseleave= () =>{
+            front.style.transform='perspective(1000px) rotateY(0deg)';
+            back.style.transform='perspective(1000px) rotateY(180deg)';
+        }
+        
+        cvv2.oninput = () =>{
+            maincvv.innerText=cvv2.value;
+        }
+        
+
+    </script>
+    
+</body>
+</html>
